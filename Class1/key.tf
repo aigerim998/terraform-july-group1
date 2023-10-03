@@ -8,3 +8,15 @@ resource "aws_s3_bucket" "example" {
   bucket_prefix = "hello-"
 
   }
+
+resource "aws_s3_bucket" "bucket" {
+  bucket = "aigerim-kaizen"
+
+  }
+
+   output bucket_info {
+   value = [
+   aws_s3_bucket.bucket.bucket,
+   aws_s3_bucket.bucket.arn
+  ]
+  }
